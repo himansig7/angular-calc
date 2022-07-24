@@ -1,3 +1,25 @@
 <p>my-calc works!</p>
 
-<button>1</button>
+{{ lastNumber }}
+
+<br />
+
+{{ op }}
+<br />
+
+{{ currentNumber }}
+
+<br />
+<span *ngFor="let n of nums" style="display:inline-block; min-width:32%">
+  <button (click)="numberPress(n)" style="width:60px; height:50px;">
+    {{ n }}
+  </button>
+</span>
+
+<span *ngFor="let n of ops" style="display:inline-block; min-width:32%">
+  <button (click)="operationPress(n)" style="width:60px; height:50px;">
+    {{ n }}
+  </button>
+</span>
+
+<br />
